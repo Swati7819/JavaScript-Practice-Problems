@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial using recursion</title>
+</head>
+<body>
+    Enter the number : <input type="text" id="num">
+    <br><br>
+    <button onclick="factorial()">Find Factorial</button>
+    <h3 id="res"></h3>
+    <script>
+      function factorial() {
+        let n = parseInt(document.getElementById("num").value);
+        let fact = 1;
+        
+        function calculateFactorial(num) {
+          if (num >= 1)
+            return num * calculateFactorial(num - 1);
+          else
+            return 1;
+        }
+
+        let ans = calculateFactorial(n);
+        document.getElementById("res").innerText = "Factorial of " + n + " is: " + ans;
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong number</title>
+</head>
+<body>
+    Enter the number : <input type="text" id="num">
+    <br><br>
+    <button onclick="armstrong()">Check</button>
+    <h3 id="res"></h3> 
+    <script>
+        function armstrong()
+        {
+            let num = document.getElementById("num").value;
+            let temp = num, digit=0, last=0, ans=0;
+            while(temp!=0)
+            {  
+                digit++;
+                temp =Math.floor(temp/10);
+            }
+             temp= num;
+            while(temp!=0)
+            {
+                last = temp%10;
+                ans += last**digit;
+                temp =Math.floor(temp/10);
+
+
+            }
+
+            if(ans==num)
+            {
+                document.getElementById("res").innerText = `${num} is an armstrong number`;
+
+            }
+            else
+            {
+                document.getElementById("res").innerText = `${num} is not an armstrong number`;
+                console.log(ans);
+                console.log(num);
+            }
+        }
+    </script>
+</body>
+</html>

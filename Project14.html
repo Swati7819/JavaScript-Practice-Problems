@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    Enter a number : <input type="number" id="num">
+    <br>
+    <br>
+    <button onclick="check()">Find Factorial</button>
+    <br>
+    <br>
+    <h3 id ="res"></h3>
+</body>
+<script>
+    function check(){
+    let fact=1;
+    let temp = document.getElementById("num").value;
+    if(isNaN(temp))
+    {
+        document.getElementById("res").innerText = `Please enter a valid number`;
+    }
+    else
+    {
+        for(let i =1;i<=temp;i++)
+        {
+            fact = fact*i;
+        }
+            
+        document.getElementById("res").innerText = `${temp} factorial is ${fact}`;
+        
+    }
+}
+</script>
+</html>

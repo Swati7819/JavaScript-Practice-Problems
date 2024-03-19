@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    Enter the number : <input type="text" id="num">
+    <br><br>
+    <button onclick="table()">Find table</button>
+    <h3 id="res"></h3> 
+
+    <script>
+        function table(){
+        let n= document.getElementById("num").value;
+
+        if(isNaN(n))
+    {
+        document.getElementById("res").innerText = `Please enter a valid number`;
+    }  else
+    { 
+        let tableContent = "";
+        for(let i=1;i<=10;i++)
+        {
+             tableContent += `${n} * ${i} = ${n*i}<br>`;
+             
+        }
+        document.getElementById("res").innerText = `${tableContent}`;
+    }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //random can be used to generate otp
+        let x = Math.random();
+        console.log("Before Calculation "+x);
+        x= x*(1000000-1)+1;
+        //if we want the number to be 4 digit - multiply by 10000 like that
+        console.log("After Calculation "+x);
+
+        console.log("Floor Calculation "+Math.floor(x));
+
+
+    </script>
+</body>
+</html>

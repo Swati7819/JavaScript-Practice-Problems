@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximum of 3 number</title>
+</head>
+<body>
+    Enter first number : <input type="text" id="num1">
+    <br>
+    <br>
+    Enter second number : <input type="text" id="num2">
+    <br>
+    <br>
+    Enter third number : <input type="text" id="num3">
+    <br>
+    <br>
+    <button onclick="largest()"> Find Largest</button>
+    <h3 id="res"></h3>
+<script>
+    function largest()
+    {
+    let n1 =document.getElementById("num1").value;
+    let n2 =document.getElementById("num2").value;
+    let n3 =document.getElementById("num3").value;
+
+    if(isNaN(n1) || isNaN(n2) ||isNaN(n3))
+    {
+        document.getElementById("res").innerText= `Please enter valid number`;
+    }
+
+    else{
+    if(n1==n2==n3)
+    {
+        document.getElementById("res").innerText= `All are same `;   
+    }
+  else{
+    let ans = Math.max(n1,n2,n3);
+    document.getElementById("res").innerText= `${ans} is the largest`;
+    }}}
+
+</script>
+
+</body>
+</html>

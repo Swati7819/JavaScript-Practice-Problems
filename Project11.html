@@ -1,0 +1,31 @@
+<!-- Program to check if a number is even or odd  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd</title>
+</head>
+<body>
+    Enter the number : <input type="text" id="data">
+    <br>
+    <br>
+    <button onclick="check()">Check</button>
+
+    <br>
+    <br>
+    <h3 id="res"></h3>
+
+</body>
+<script>
+    function check() {
+    let value= document.getElementById("data").value;
+    if (isNaN(value)) {
+            document.getElementById("res").innerText = "Please enter a valid number.";
+        } 
+    else{    
+    let temp = (value%2==0)? `${value} is an even number ` : `${value} is an odd number` ; 
+    document.getElementById("res").innerText = `${temp}`;
+    }}
+</script>
+</html>

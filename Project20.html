@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str= prompt("Enter the string ");
+        let l = str.length;
+        let msg="It is a palindrome";
+        for (let i = 0; i < l/2; i++) {
+            if(str[i]!= str[l-1-i])
+            
+                msg= "Not a palidrome string";
+                break;
+             
+        }
+        console.log(msg);
+    </script>
+</body>
+</html>
