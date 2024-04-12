@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check whether substring exist or not</title>
+</head>
+<body>
+    <script>
+        let str = prompt("Enter the string : ");
+        let substr = prompt("Enter the substring: ");
+
+        let check = str.includes(substr);
+        let check2 = str.indexOf(substr);
+
+
+        if(check==true)
+        {
+            alert("True")
+            alert(check2);
+        }
+        else
+        {
+            alert("False")
+        }
+    </script>
+</body>
+</html>
